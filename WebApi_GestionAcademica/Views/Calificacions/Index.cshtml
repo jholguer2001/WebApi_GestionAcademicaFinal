@@ -1,0 +1,69 @@
+﻿@model IEnumerable<WebApi_GestionAcademica.Models.Calificacion>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Asignacion.AsignacionID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nota1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Asistencia1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nota2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Asistencia2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Suplementario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Observacion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Asignacion.AsignacionID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nota1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Asistencia1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nota2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Asistencia2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Suplementario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Observacion)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CalificacionID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CalificacionID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CalificacionID })
+        </td>
+    </tr>
+}
+
+</table>

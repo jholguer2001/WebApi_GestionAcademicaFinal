@@ -1,0 +1,74 @@
+﻿@model WebApi_GestionAcademica.Models.Calificacion
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Calificacion</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Asignacion.AsignacionID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Asignacion.AsignacionID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nota1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nota1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Asistencia1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Asistencia1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nota2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nota2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Asistencia2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Asistencia2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Suplementario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Suplementario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Observacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Observacion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CalificacionID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
